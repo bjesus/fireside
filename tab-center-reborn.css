@@ -1,0 +1,32 @@
+body {
+  flex-direction: column-reverse;
+  height: calc(100% - 40px);
+}
+
+#newtab {
+  margin-left: 2px;
+}
+
+#newtab-icon {
+  margin-right: 8px !important;
+}
+
+#searchbox {
+  padding: 0px;
+}
+
+#settings {
+  display: none;
+}
+
+.tab-title-wrapper {
+  margin-left: 7px;
+}
+
+.tab-meta-image {
+  margin-left: 4px;
+}
+
+.tab {
+  height: 34px !important;
+}
