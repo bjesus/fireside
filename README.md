@@ -10,7 +10,8 @@ Fireside is a stylesheet for Firefox that provides you with a clean UI. Less clu
 - Keyboard and mouse support
 
 ## Tested with
-- Firefox Developer Edition, Linux (Wayland)
+- Firefox 121, Linux (Wayland)
+- Firefox Developer Edition 122.0b3, Linux (Wayland)
 
 Contribute by submitting a PR for successful tests on other platforms or open an issue if unsuccessful.
 
