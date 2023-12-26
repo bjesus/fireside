@@ -63,8 +63,9 @@ toolbar#TabsToolbar {
 }
 
 #sidebar-box {
-  display: absolute;
+  position: absolute !important;
   height: 100%;
+  width: 434px !important;
   z-index: 1;
   margin-top: 41px !important;
 }
