@@ -32,7 +32,7 @@ hbox#nav-bar-customization-target {
 }
 
 #navigator-toolbox {
-  width: 434px !important;
+  width: 100vw !important;
   position: absolute !important;
   z-index: 0;
 }
@@ -55,7 +55,7 @@ hbox#nav-bar-customization-target {
 
 #sidebar-splitter {
   width: 37px !important;
-  z-index: -10;
+  z-index: -10 !important;
 }
 
 toolbar#TabsToolbar {
@@ -67,7 +67,11 @@ toolbar#TabsToolbar {
   height: 100%;
   width: 434px !important;
   z-index: 1;
-  margin-top: 41px !important;
+  margin-top: 40px !important;
+}
+
+#sidebar-box #sidebar {
+  width: 434px !important;
 }
 
 #appcontent {
@@ -89,4 +93,8 @@ toolbar#TabsToolbar {
 /* Hide sidebar title */
 #sidebar-header {
   display: none;
+}
+
+#tabbrowser-tabbox {
+  z-index: 1 !important;
 }
