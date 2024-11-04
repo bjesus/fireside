@@ -85,6 +85,7 @@ toolbar#TabsToolbar {
 }
 
 :root:not(:has(#tabbrowser-tabbox:hover)),
+:root:not(:has(#toolbar-menubar[inactive])),
 :root:has(#navigator-toolbox:focus-within) {
   #navigator-toolbox {
     z-index: 9001 !important;
