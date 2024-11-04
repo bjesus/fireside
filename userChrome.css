@@ -37,16 +37,10 @@ hbox#nav-bar-customization-target {
   z-index: 0;
 }
 
-:root:has(#sidebar-box:hover) #navigator-toolbox {
-  z-index: 9;
-}
-
-:root:has(#sidebar-box:hover) #sidebar-box {
-  z-index: 8;
-}
-
-:root:has(#sidebar-splitter:hover) #sidebar-box {
-  z-index: 8;
+#urlbar-container {
+  pointer-events: none;
+  position: absolute;
+  top: -1000px;
 }
 
 #PanelUI-menu-button {
@@ -65,36 +59,43 @@ toolbar#TabsToolbar {
 #sidebar-box {
   position: absolute !important;
   height: 100%;
-  width: 434px !important;
+  width: 435px !important;
   z-index: 1;
   margin-top: 40px !important;
 }
 
 #sidebar-box #sidebar {
-  width: 434px !important;
+  width: 435px !important;
 }
 
 #appcontent {
   z-index: 3;
 }
 
-#browser #sidebar-box:focus-within,
-#browser #sidebar-box:hover,
-#navigator-toolbox:hover ~ #browser #sidebar-box,
-#navigator-toolbox:focus-within ~ #browser #sidebar-box {
-  z-index: 8 !important;
-}
-
-#navigator-toolbox:hover,
 #navigator-toolbox:focus-within {
   z-index: 9001 !important;
 }
 
-/* Hide sidebar title */
 #sidebar-header {
   display: none;
 }
 
 #tabbrowser-tabbox {
   z-index: 1 !important;
+}
+
+:root:not(:has(#tabbrowser-tabbox:hover)),
+:root:has(#navigator-toolbox:focus-within) {
+  #navigator-toolbox {
+    z-index: 9001 !important;
+  }
+
+  #sidebar-box {
+    z-index: 8 !important;
+  }
+
+  #urlbar-container {
+    pointer-events: all;
+    position: inherit;
+  }
 }
