@@ -34,7 +34,8 @@ hbox#nav-bar-customization-target {
 #navigator-toolbox {
   width: 100vw !important;
   position: absolute !important;
-  z-index: 0;
+  z-index: 9001 !important;
+  top: -40px;
 }
 
 #urlbar-container {
@@ -72,10 +73,6 @@ toolbar#TabsToolbar {
   z-index: 3;
 }
 
-#navigator-toolbox:focus-within {
-  z-index: 9001 !important;
-}
-
 #sidebar-header {
   display: none;
 }
@@ -84,11 +81,11 @@ toolbar#TabsToolbar {
   z-index: 1 !important;
 }
 
-:root:not(:has(#tabbrowser-tabbox:hover)),
+:root:hover:not(:has(#tabbrowser-tabbox:hover)),
 :root:not(:has(#toolbar-menubar[inactive])),
 :root:has(#navigator-toolbox:focus-within) {
   #navigator-toolbox {
-    z-index: 9001 !important;
+    top: auto;
   }
 
   #sidebar-box {
