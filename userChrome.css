@@ -3,16 +3,8 @@
   flex-direction: row-reverse;
 }
 
-#nav-bar-overflow-button {
-  display: none;
-}
-
 hbox#nav-bar-customization-target {
   margin-top: 3px !important;
-}
-
-#PanelUI-menu-button {
-  margin-top: 6px;
 }
 
 #urlbar {
@@ -22,20 +14,16 @@ hbox#nav-bar-customization-target {
 
 #back-button,
 #forward-button,
+#nav-bar-overflow-button,
 #stop-reload-button {
   display: none;
-}
-
-#downloads-button,
-#unified-extensions-button {
-  margin-top: -4px !important;
 }
 
 #navigator-toolbox {
   width: 100vw !important;
   position: absolute !important;
   z-index: 9001 !important;
-  top: -40px;
+  transform: translateY(-39px) !important;
 }
 
 #urlbar-container {
@@ -44,56 +32,56 @@ hbox#nav-bar-customization-target {
   top: -1000px;
 }
 
-#PanelUI-menu-button {
-  padding-right: 0 !important;
-}
-
-#sidebar-splitter {
-  width: 37px !important;
-  z-index: -10 !important;
-}
-
 toolbar#TabsToolbar {
   display: none;
 }
 
-#sidebar-box {
-  position: absolute !important;
-  height: 100%;
-  width: 435px !important;
-  z-index: 1;
-  margin-top: 40px !important;
-}
-
-#sidebar-box #sidebar {
-  width: 435px !important;
-}
-
-#appcontent {
-  z-index: 3;
-}
-
-#sidebar-header {
-  display: none;
-}
-
-#tabbrowser-tabbox {
-  z-index: 1 !important;
+#sidebar-main {
+  padding-top: 40px;
 }
 
 :root:hover:not(:has(#tabbrowser-tabbox:hover)),
 :root:not(:has(#toolbar-menubar[inactive])),
-:root:has(#navigator-toolbox:focus-within) {
+:root:has(#navigator-toolbox:focus-within),
+:root:has(#mainPopupSet [panelopen="true"]) {
   #navigator-toolbox {
-    top: auto;
-  }
-
-  #sidebar-box {
-    z-index: 8 !important;
+    transform: translateY(0px) !important;
   }
 
   #urlbar-container {
     pointer-events: all;
     position: inherit;
+  }
+}
+
+/* Sidebar adjustments */
+#vertical-tabs-newtab-button,
+[extensionId] {
+  display: none !important;
+}
+
+#vertical-pinned-tabs-container {
+  width: 3rem;
+
+  &::part(scrollbox) {
+    [part="items-wrapper"] {
+      flex-direction: row !important;
+      width: 250px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+#tabbrowser-tabs[expanded] {
+  #vertical-pinned-tabs-container {
+    width: auto;
+  }
+}
+
+tab[pinned] {
+  width: 3rem !important;
+
+  .tab-close-button.close-icon {
+    display: none;
   }
 }
