@@ -60,7 +60,7 @@ toolbar#TabsToolbar {
   display: none !important;
 }
 
-#vertical-pinned-tabs-container {
+#pinned-tabs-container {
   width: 3rem;
 
   &::part(scrollbox) {
@@ -73,7 +73,7 @@ toolbar#TabsToolbar {
 }
 
 #tabbrowser-tabs[expanded] {
-  #vertical-pinned-tabs-container {
+  #pinned-tabs-container {
     width: auto;
   }
 }
